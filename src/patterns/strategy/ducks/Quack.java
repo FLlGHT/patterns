@@ -1,4 +1,4 @@
-package patterns.strategy;
+package patterns.strategy.ducks;
 
 /**
  * @author FLIGHT
