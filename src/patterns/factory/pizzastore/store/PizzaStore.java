@@ -1,4 +1,4 @@
-package patterns.factory.pizzastore;
+package patterns.factory.pizzastore.store;
 
 /**
  * @author FLIGHT
