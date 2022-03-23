@@ -9,7 +9,7 @@ import java.util.List;
  * @creationDate 21.03.2022
  */
 public class Waitress {
-    private List<Menu> menus = new ArrayList<>();
+    private List<Menu> menus;
 
 
     public Waitress(List<Menu> menus) {
