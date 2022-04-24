@@ -32,7 +32,7 @@ public class HasQuarterState implements State {
         int winner = random.nextInt(100);
         if (winner < 10 && gumballMachine.getCount() > 1)
             gumballMachine.setState(gumballMachine.getWinnerState());
-        else 
+        else
             gumballMachine.setState(gumballMachine.getSoldState());
     }
 
