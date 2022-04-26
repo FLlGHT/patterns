@@ -1,4 +1,4 @@
-package patterns.proxy;
+package patterns.proxy.gumballmachine;
 
 /**
  * @author FLIGHT

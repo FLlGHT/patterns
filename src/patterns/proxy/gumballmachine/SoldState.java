@@ -1,14 +1,14 @@
-package patterns.proxy;
+package patterns.proxy.gumballmachine;
 
 /**
  * @author FLIGHT
  * @creationDate 23.04.2022
  */
-public class WinnerState implements State {
+public class SoldState implements State {
 
     private final GumballMachine gumballMachine;
 
-    public WinnerState(GumballMachine gumballMachine) {
+    public SoldState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
@@ -30,16 +30,11 @@ public class WinnerState implements State {
     @Override
     public void dispense() {
         gumballMachine.releaseBall();
-        if (gumballMachine.getCount() == 0)
-            gumballMachine.setState(gumballMachine.getSoldOutState());
+        if (gumballMachine.getCount() > 0)
+            gumballMachine.setState(gumballMachine.getNoQuarterState());
         else {
-            gumballMachine.releaseBall();
-            System.out.println("You are a winner! You got a two gumballs for your quarter!");
-            if (gumballMachine.getCount() > 0) gumballMachine.setState(gumballMachine.getNoQuarterState());
-            else {
-                System.out.println("Oops, out of gumballs");
-                gumballMachine.setState(gumballMachine.getSoldOutState());
-            }
+            System.out.println("Oops, out of gumballs!");
+            gumballMachine.setState(gumballMachine.getSoldOutState());
         }
     }
 }

@@ -1,4 +1,4 @@
-package patterns.proxy;
+package patterns.proxy.gumballmachine;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
